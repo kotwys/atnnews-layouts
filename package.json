@@ -5,7 +5,27 @@
     "author": "kotwys",
     "license": "MIT",
     "private": true,
+    "scripts": {
+        "build:graphics": "parcel build src/graphics/*.html -d graphics/ --public-url ./",
+        "watch:graphics": "parcel watch src/graphics/*.html -d graphics/ --public-url ./"
+    },
     "nodecg": {
-        "compatibleRange": "^1.6"
+        "compatibleRange": "^1.6",
+        "graphics": [
+            {
+                "file": "main.html",
+                "width": 1920,
+                "height": 1080
+            }
+        ]
+    },
+    "devDependencies": {
+        "@tsconfig/svelte": "^1.0.4",
+        "parcel-bundler": "^1.12.4",
+        "parcel-plugin-svelte": "^4.0.6",
+        "svelte": "^3.24.0",
+        "svelte-check": "^1.0.1",
+        "svelte-preprocess": "^4.0.9",
+        "typescript": "^3.9.7"
     }
 }
