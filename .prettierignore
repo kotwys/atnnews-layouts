@@ -1,6 +1,6 @@
 node_modules
 
-# Parcel bundling cache
+# Parcel cache
 .cache
 
 # Built artifacts
