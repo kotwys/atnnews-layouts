@@ -1,0 +1,11 @@
+{
+    "name": "atn-news",
+    "version": "0.1.0",
+    "description": "ATN News graphics for NodeCG",
+    "author": "kotwys",
+    "license": "MIT",
+    "private": true,
+    "nodecg": {
+        "compatibleRange": "^1.6"
+    }
+}
