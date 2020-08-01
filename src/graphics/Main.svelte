@@ -1,5 +1,9 @@
 <script lang="ts">
     import Omnibar from './main/Omnibar.svelte';
+    import { replicant } from '../utils/nodecg';
+
+    const omnibarShown = replicant<boolean>('omnibar.shown', false);
+    const program = replicant<string>('program-name', '');
 </script>
 
 <style lang="scss">
@@ -16,5 +20,7 @@
 </style>
 
 <div>
-    <Omnibar program="События" />
+    {#if $omnibarShown}
+        <Omnibar program={$program} />
+    {/if}
 </div>

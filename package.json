@@ -8,12 +8,22 @@
     "scripts": {
         "clean": "rimraf dashboard extension graphics",
         "build": "run-s clean build:*",
+        "build:dashboard": "webpack --config webpack.dashboard.js",
         "build:graphics": "webpack --config webpack.graphics.js",
         "watch": "run-p watch:*",
+        "watch:dashboard": "webpack --config webpack.dashboard.js -w",
         "watch:graphics": "webpack --config webpack.graphics.js -w"
     },
     "nodecg": {
         "compatibleRange": "^1.6",
+        "dashboardPanels": [
+            {
+                "name": "omnibar",
+                "title": "Omnibar",
+                "file": "omnibar.html",
+                "width": 2
+            }
+        ],
         "graphics": [
             {
                 "file": "main.html",
