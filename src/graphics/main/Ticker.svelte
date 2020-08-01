@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount, onDestroy, tick } from 'svelte';
-    import { px2vh } from '../../utils/units';
+    import { px2vh } from '../utils/units';
 
     export let speed: number = 15;
     export let pull: () => Promise<string[]>;
@@ -9,7 +9,7 @@
     let firstLineLength: number;
     const getFirstLength = () => {
         const firstElement = ticker?.firstElementChild as HTMLElement;
-        const styles = firstElement && window.getComputedStyle(firstElement);
+        const styles = firstElement && getComputedStyle(firstElement);
         firstLineLength =
             styles &&
             px2vh(window.innerHeight, parseFloat(styles.width) + parseFloat(styles.marginRight));
@@ -27,9 +27,7 @@
     let frameRequest: number;
     let previousFrame: number;
 
-    function step() {
-        const currentFrame = performance.now();
-
+    function step(currentFrame: number) {
         if (lines.length > 0) {
             const delta = (currentFrame - previousFrame) / 1000;
             translation += speed * delta;
@@ -54,7 +52,7 @@
 
     onMount(() => {
         previousFrame = performance.now();
-        step();
+        requestAnimationFrame(step);
     });
 
     onDestroy(() => {
