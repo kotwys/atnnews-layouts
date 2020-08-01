@@ -1,5 +1,6 @@
 <script lang="ts">
     import Ticker from './Ticker.svelte';
+    import { rotate, weight } from '../utils/transition';
 
     export let program: string;
     const pull = () =>
@@ -33,6 +34,7 @@
         line-height: 5vh;
         vertical-align: -0.3vh;
         margin-right: 2vh;
+        will-change: font-weight;
     }
 
     .omnibar__ticker {
@@ -42,9 +44,9 @@
     }
 </style>
 
-<div class="omnibar">
+<div transition:rotate="{{ origin: 'bottom' }}" class="omnibar">
     <div class="omnibar__content">
-        <div class="omnibar__title">{program}</div>
+        <div class="omnibar__title" in:weight="{{ from: 300, delay: 500 }}">{program}</div>
         <div class="omnibar__ticker">
             <Ticker {pull} />
         </div>
