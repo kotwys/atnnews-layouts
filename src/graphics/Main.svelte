@@ -3,8 +3,8 @@
     import Headline from './main/Headline.svelte';
     import { replicant } from '../utils/nodecg';
 
-    const omnibarShown = replicant<boolean>('omnibar.shown', false);
-    const program = replicant<string>('program-name', '');
+    const omnibarShown = replicant('omnibar.shown', false);
+    const program = replicant('program-name', '');
 
     const headlineShown = replicant('headline.shown', false);
     const headlineContent = replicant('headline.content', '');

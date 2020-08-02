@@ -5,30 +5,14 @@
     const shown = replicant<boolean>('omnibar.shown', false);
 
     const availableTickers = replicant<Asset[]>('assets:ticker-files', []);
-    const currentTicker = replicant<string>('omnibar.ticker-file', '');
+    const currentTicker = replicant('omnibar.ticker-file', '');
 
-    const programNameRepl = replicant<string>('program-name', '');
+    const programNameRepl = replicant('program-name', '');
     let programName = '';
 </script>
 
 <style lang="scss">
-    :global(body) {
-        margin: 0;
-        padding: 0;
-    }
-
-    .app {
-        padding: 15px;
-
-        :global(.mdc-button),
-        :global(.mdc-text-field) {
-            width: 100%;
-        }
-    }
-
-    section {
-        margin-bottom: 10px;
-    }
+    @use './styles';
 
     .controls {
         display: flex;

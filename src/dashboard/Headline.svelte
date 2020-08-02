@@ -7,18 +7,7 @@
 </script>
 
 <style lang="scss">
-    :global(body) {
-        margin: 0;
-        padding: 0;
-    }
-
-    .app {
-        padding: 15px;
-    }
-
-    section {
-        margin-bottom: 10px;
-    }
+    @use './styles';
 
     .controls {
         display: flex;
