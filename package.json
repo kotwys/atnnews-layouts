@@ -1,7 +1,7 @@
 {
-    "name": "atn-news",
+    "name": "atnnews-layouts",
     "version": "0.1.0",
-    "description": "ATN News graphics for NodeCG",
+    "description": "ATN News' on-screen graphics for NodeCG",
     "author": "kotwys",
     "license": "MIT",
     "private": true,
