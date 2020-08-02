@@ -24,6 +24,12 @@
                 "title": "Omnibar",
                 "file": "omnibar.html",
                 "width": 2
+            },
+            {
+                "name": "headline",
+                "title": "Headline",
+                "file": "headline.html",
+                "width": 3
             }
         ],
         "graphics": [

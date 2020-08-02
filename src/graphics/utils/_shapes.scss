@@ -1,0 +1,10 @@
+@mixin rounded($tl, $tr, $br, $bl) {
+    border-top-left-radius: $tl;
+    border-top-right-radius: $tr;
+    border-bottom-right-radius: $br;
+    border-bottom-left-radius: $bl;
+}
+
+@mixin bubble($radius) {
+    @include rounded($radius, $radius, $radius, 0);
+}
