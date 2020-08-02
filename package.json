@@ -30,6 +30,12 @@
                 "title": "Headline",
                 "file": "headline.html",
                 "width": 3
+            },
+            {
+                "name": "nameplate",
+                "title": "Nameplate",
+                "file": "nameplate.html",
+                "width": 2
             }
         ],
         "graphics": [
