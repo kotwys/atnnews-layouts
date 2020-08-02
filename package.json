@@ -9,10 +9,12 @@
         "clean": "rimraf dashboard extension graphics",
         "build": "run-s clean build:*",
         "build:dashboard": "webpack --config webpack.dashboard.js",
+        "build:extension": "tsc -b tsconfig.extension.json",
         "build:graphics": "webpack --config webpack.graphics.js",
         "watch": "run-p watch:*",
         "watch:dashboard": "webpack --config webpack.dashboard.js -w",
-        "watch:graphics": "webpack --config webpack.graphics.js -w"
+        "watch:graphics": "webpack --config webpack.graphics.js -w",
+        "watch:extension": "tsc -b tsconfig.extension.json -w"
     },
     "nodecg": {
         "compatibleRange": "^1.6",
@@ -29,6 +31,13 @@
                 "file": "main.html",
                 "width": 1920,
                 "height": 1080
+            }
+        ],
+        "assetCategories": [
+            {
+              "name": "ticker-files",
+              "title": "Tickers",
+              "allowedTypes": ["txt"]
             }
         ]
     },

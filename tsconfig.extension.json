@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "outDir": "extension",
+        "target": "es2017",
+        "module": "commonjs",
+        "rootDir": "src/extension",
+        "moduleResolution": "node"
+    },
+    "include": ["src/extension"]
+}

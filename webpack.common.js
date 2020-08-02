@@ -70,7 +70,12 @@ module.exports = (name) => {
                 },
                 {
                     test: /\.ts$/,
-                    use: 'ts-loader',
+                    use: {
+                        loader: 'ts-loader',
+                        options: {
+                            configFile: 'tsconfig.browser.json',
+                        },
+                    },
                     exclude: /node-modules/,
                 },
             ],

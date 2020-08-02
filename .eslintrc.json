@@ -29,6 +29,19 @@
         {
             "files": ["**/*.svelte"],
             "processor": "svelte3/svelte3"
+        },
+        {
+            "files": ["src/extension/**/*"],
+            "plugins": [
+                "@typescript-eslint",
+                "prettier"
+            ],
+            "parserOptions": {
+                "project": "tsconfig.extension.json"
+            },
+            "rules": {
+                "@typescript-eslint/no-var-requires": "off"
+            }
         }
     ]
 }

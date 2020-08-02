@@ -3,8 +3,7 @@
     import { rotate, weight } from '../utils/transition';
 
     export let program: string;
-    const pull = () =>
-        Promise.resolve(Array(4).fill('Lorem ipsum dolor sit amet consectetur adipisicing elit.'));
+    const pull = () => nodecg.sendMessage('omnibar.get-headlines');
 </script>
 
 <style lang="scss">
@@ -44,9 +43,9 @@
     }
 </style>
 
-<div transition:rotate="{{ origin: 'bottom' }}" class="omnibar">
+<div transition:rotate={{ origin: 'bottom' }} class="omnibar">
     <div class="omnibar__content">
-        <div class="omnibar__title" in:weight="{{ from: 300, delay: 500 }}">{program}</div>
+        <div class="omnibar__title" in:weight={{ from: 300, delay: 500 }}>{program}</div>
         <div class="omnibar__ticker">
             <Ticker {pull} />
         </div>
