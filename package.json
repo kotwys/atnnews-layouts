@@ -36,6 +36,12 @@
                 "title": "Nameplate",
                 "file": "nameplate.html",
                 "width": 2
+            },
+            {
+                "name": "program",
+                "title": "Program",
+                "file": "program.html",
+                "width": 2
             }
         ],
         "graphics": [

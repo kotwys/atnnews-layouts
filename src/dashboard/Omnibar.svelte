@@ -6,9 +6,6 @@
 
     const availableTickers = replicant<Asset[]>('assets:ticker-files', []);
     const currentTicker = replicant('omnibar.ticker-file', '');
-
-    const programNameRepl = replicant('program-name', '');
-    let programName = '';
 </script>
 
 <style lang="scss">
@@ -34,18 +31,6 @@
             <button on:click={() => ($shown = true)} disabled={$shown}>Show</button>
             <button on:click={() => ($shown = false)} disabled={!$shown}>Hide</button>
         </div>
-    </section>
-    <section>
-        <label>
-            Program Name
-            <input type="text" bind:value={programName} />
-        </label>
-        <button
-            on:click={() => programNameRepl.set(programName)}
-            disabled={$programNameRepl === programName}
-        >
-            Update
-        </button>
     </section>
     <section>
         <label>

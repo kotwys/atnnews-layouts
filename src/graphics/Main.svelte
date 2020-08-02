@@ -7,7 +7,7 @@
     import type { ShowNameplateMsg } from '../types/nameplate';
 
     const omnibarShown = replicant('omnibar.shown', false);
-    const program = replicant('program-name', '');
+    const program = replicant('program.name', '');
 
     const headlineShown = replicant('headline.shown', false);
     const headlineContent = replicant('headline.content', '');
