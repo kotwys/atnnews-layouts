@@ -11,9 +11,9 @@
         shown = true;
         nodecg.sendMessage('nameplate.show', {
             duration,
-            data: { name, position }
+            data: { name, position },
         });
-        setTimeout(() => shown = false, duration * 1000);
+        setTimeout(() => (shown = false), duration * 1000);
     }
 </script>
 

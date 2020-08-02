@@ -44,7 +44,7 @@
 
         .embolden :global(strong) {
             font-weight: 600;
-            transition: 0.5s $decelerated 0.5s;
+            transition: font-weight 0.5s $decelerated 0.5s;
         }
     }
 

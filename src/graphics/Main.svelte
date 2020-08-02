@@ -18,7 +18,7 @@
     function showNameplate({ duration, data }: ShowNameplateMsg) {
         nameplateData = data;
         nameplateShown = true;
-        setTimeout(() => nameplateShown = false, duration * 1000);
+        setTimeout(() => (nameplateShown = false), duration * 1000);
     }
     nodecg.listenFor('nameplate.show', showNameplate);
 </script>
