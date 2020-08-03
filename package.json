@@ -42,11 +42,22 @@
                 "title": "Program",
                 "file": "program.html",
                 "width": 2
+            },
+            {
+                "name": "main-headlines",
+                "title": "Main Headlines",
+                "file": "main-headlines.html",
+                "width": 3
             }
         ],
         "graphics": [
             {
                 "file": "main.html",
+                "width": 1920,
+                "height": 1080
+            },
+            {
+                "file": "headlines.html",
                 "width": 1920,
                 "height": 1080
             }
