@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount, onDestroy, tick } from 'svelte';
-    import { px2vh } from '../utils/units';
+    import { toRelative } from '../utils/units';
 
     export let speed: number = 15;
     export let pull: () => Promise<string[]>;
@@ -12,7 +12,7 @@
         const styles = firstElement && getComputedStyle(firstElement);
         firstLineLength =
             styles &&
-            px2vh(window.innerHeight, parseFloat(styles.width) + parseFloat(styles.marginRight));
+            toRelative(window.innerHeight, parseFloat(styles.width) + parseFloat(styles.marginRight));
     };
 
     let lines: string[] = [];
@@ -42,7 +42,7 @@
         } else {
             if (!loading) loading = getLines();
 
-            translation = -px2vh(window.innerHeight, ticker.clientWidth);
+            translation = -toRelative(window.innerHeight, ticker.clientWidth);
             loading.then(getFirstLength);
         }
 

@@ -4,12 +4,12 @@
     import { fade, fly } from 'svelte/transition';
     import { cubicOut, cubicInOut } from 'svelte/easing';
     import { replicant } from '../utils/nodecg'
-    import { vh2px } from './utils/units';
+    import { fromRelative } from './utils/units';
 
     let windowHeight: number;
     let windowWidth: number;
-    $: fromvh = (v: number) => vh2px(windowHeight, v);
-    $: fromvw = (v: number) => vh2px(windowWidth, v);
+    $: fromvh = (v: number) => fromRelative(windowHeight, v);
+    $: fromvw = (v: number) => fromRelative(windowWidth, v);
 
     const programName = replicant('program.name', '');
     const issue = replicant('program.issue', '');

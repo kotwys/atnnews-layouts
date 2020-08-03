@@ -1,17 +1,17 @@
 /**
- * Convert px units to vh
- * @param screenHeight - height of the screen
+ * Convert pixels to relative units
+ * @param total - total size
  * @param value - value to convert
  */
-export function px2vh(screenHeight: number, value: number): number {
-    return (value / screenHeight) * 100;
+export function toRelative(total: number, value: number): number {
+    return (value / total) * 100;
 }
 
 /**
- * Convert vh units to px
- * @param screenHeight - height of the screen
+ * Convert relative units to pixels
+ * @param total - total size
  * @param value - value to convert
  */
-export function vh2px(screenHeight: number, value: number): number {
-    return screenHeight * (value / 100);
+export function fromRelative(total: number, value: number): number {
+    return total * (value / 100);
 }
