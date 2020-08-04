@@ -6,6 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const preprocess = require('svelte-preprocess');
 
@@ -99,5 +101,8 @@ module.exports = (name) => {
                 ? [new LiveReloadPlugin({ port: 0, appendScriptTag: true })]
                 : [],
         ),
+        optimization: {
+            minimizer: [new TerserPlugin(), new OptimizeCssAssetsPlugin()],
+        },
     };
 };
