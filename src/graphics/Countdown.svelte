@@ -31,6 +31,7 @@
 
 <style lang="scss">
     @use 'sass:math';
+    @use 'utils/layout';
 
     @mixin glitchy($name) {
         @keyframes #{$name} {
@@ -59,8 +60,8 @@
     }
 
     .app {
+        @include layout.force-fullscreen;
         background: rgba(black, 0.25);
-        height: 100vh;
 
         display: flex;
         justify-content: center;

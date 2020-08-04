@@ -19,6 +19,8 @@
 </script>
 
 <style lang="scss">
+    @use 'utils/layout';
+
     $safe-area: 5vw;
 
     :global(body) {
@@ -28,8 +30,8 @@
     }
 
     .app {
+        @include layout.force-fullscreen;
         box-sizing: border-box;
-        height: 100vh;
         padding: {
             left: $safe-area;
             right: $safe-area;

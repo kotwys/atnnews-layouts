@@ -37,9 +37,13 @@
         overflow: hidden;
     }
 
+    .app {
+        @include layout.force-fullscreen;
+    }
+
     .app__content {
         box-sizing: border-box;
-        height: 100vh;
+        height: 100%;
         padding: {
             bottom: 12.5vh;
         }
@@ -52,7 +56,7 @@
     }
 </style>
 
-<div>
+<div class="app">
     {#if $omnibarShown}
         <Omnibar program={$program} />
     {/if}
