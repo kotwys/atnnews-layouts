@@ -1,0 +1,10 @@
+node_modules
+
+# Source files (this branch is for built artifacts)
+/src
+
+# Development files
+.eslint*
+.prettier*
+tsconfig*.json
+webpack*.js

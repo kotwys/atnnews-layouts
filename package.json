@@ -1,11 +1,69 @@
 {
-    "name": "atn-news",
+    "name": "atnnews-layouts",
     "version": "0.1.0",
-    "description": "ATN News graphics for NodeCG",
+    "description": "ATN News' on-screen graphics for NodeCG",
     "author": "kotwys",
     "license": "MIT",
     "private": true,
     "nodecg": {
-        "compatibleRange": "^1.6"
+        "compatibleRange": "^1.6",
+        "dashboardPanels": [
+            {
+                "name": "omnibar",
+                "title": "Omnibar",
+                "file": "omnibar.html",
+                "width": 2
+            },
+            {
+                "name": "headline",
+                "title": "Headline",
+                "file": "headline.html",
+                "width": 3
+            },
+            {
+                "name": "nameplate",
+                "title": "Nameplate",
+                "file": "nameplate.html",
+                "width": 2
+            },
+            {
+                "name": "program",
+                "title": "Program",
+                "file": "program.html",
+                "width": 2
+            },
+            {
+                "name": "main-headlines",
+                "title": "Main Headlines",
+                "file": "main-headlines.html",
+                "width": 3
+            }
+        ],
+        "graphics": [
+            {
+                "file": "main.html",
+                "width": 1920,
+                "height": 1080
+            },
+            {
+                "file": "headlines.html",
+                "width": 1920,
+                "height": 1080
+            },
+            {
+                "file": "countdown.html",
+                "width": 1920,
+                "height": 720
+            }
+        ],
+        "assetCategories": [
+            {
+                "name": "ticker-files",
+                "title": "Tickers",
+                "allowedTypes": [
+                    "txt"
+                ]
+            }
+        ]
     }
 }
