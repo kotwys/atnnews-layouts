@@ -3,15 +3,18 @@
 
     const programRepl = replicant('program.name', '');
     const issueRepl = replicant('program.issue', '');
+    const startRepl = replicant('program.start', '');
 
     let program = '';
     let issue = '';
+    let start = '';
 
     function update() {
-        if (!program || !issue) return;
+        if (!program || !issue || !start) return;
 
         $programRepl = program;
         $issueRepl = issue;
+        $startRepl = start;
     }
 </script>
 
@@ -36,6 +39,10 @@
     <label>
         Issue:
         <input type="text" bind:value={issue} />
+    </label>
+    <label>
+        Start time:
+        <input type="time" bind:value={start} />
     </label>
     <button on:click={update}>Update</button>
 </div>
