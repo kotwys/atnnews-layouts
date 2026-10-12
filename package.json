@@ -6,7 +6,7 @@
     "license": "MIT",
     "private": true,
     "nodecg": {
-        "compatibleRange": "^1.6",
+        "compatibleRange": "^1.6 || ^2",
         "dashboardPanels": [
             {
                 "name": "omnibar",
