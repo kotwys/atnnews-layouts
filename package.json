@@ -17,7 +17,7 @@
         "watch:extension": "tsc -b tsconfig.extension.json -w"
     },
     "nodecg": {
-        "compatibleRange": "^1.6",
+        "compatibleRange": "^1.6 || ^2",
         "dashboardPanels": [
             {
                 "name": "omnibar",
